@@ -1,0 +1,11 @@
+<!-- Here we display the answers -->
+
+<ng-container *ngFor="let answer of quiz.answers; let i = index;">
+  <b>Question : {{ answer.question }}</b><br>
+  <i>Answer : {{ answer.answer }}</i><br>
+  <p></p>
+</ng-container>
+
+<!-- A button allows us to start the quiz over, and a click event resets the user answers -->
+
+<button routerLink="/question/0" (click)="quiz.answers = []">Start the Quiz over</button>
